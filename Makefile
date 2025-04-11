@@ -23,6 +23,9 @@ test_logique: tests/test_logique.c logique.o
 test_modelisation: tests/test_modelisation.c modelisation.o plateau.o logique.o commun.o listes.o
 	$(CC) $(CFLAGS) -o $@ $^
 
+test_satsolver: tests/test_satsolver.c 3sat_solver.c
+	$(CC) $(CFLAGS) -o $@ $^
+
 
 disp_all:
 	make test_plateau
